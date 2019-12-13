@@ -25,12 +25,18 @@ class Anagramer
   end
 
   def check_if_anagram
-    result = @input1 + @input2
-    self.function_tight(result)
+    if @input1.length != @input2.length
+    puts "This is NOT an anagram"
   end
 
-  # def function_tight(result)
-  #   super_array = [result, result, result]
-  #   super_array.reduce(:+)
-  # end
+  array_input1 = @input1.downcase.chars
+  array_input2 = @input2.downcase.chars
+
+
+end
+
+
+def check_if_anagram
+  if "franck".length != "FIDKJE".length
+  puts "This is NOT an anagram"
 end
