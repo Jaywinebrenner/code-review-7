@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # require ('rspec')
-require ('./lib/template')
+require ('./lib/anagramer')
 
 resume = true
 while (resume)
