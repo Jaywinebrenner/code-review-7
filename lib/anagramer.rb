@@ -25,14 +25,39 @@
 class Anagramer
 
   def check_if_anagram (input1, input2)
+
+
+    if input1.scan(/[aeiou]/) == []
+      puts "Type in a real words, you bozo."
+      return "Type in a real words, you bozo."
+    end
     if input1.length != input2.length
-      puts "This is NOT an anagram"
+      puts "This is NOT an anagram!"
       return "This is NOT an anagram!"
     end
+    vowels = ["a", "e", "i", "o", "u"]
     if input2.downcase.chars.sort == input1.downcase.chars.sort
       puts "This is an ANAGRAM!"
       return "This is an ANAGRAM!"
     end
 
   end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if "hhht".scan(/[aeiou]/) != []
+  puts "Type in a real words, you bozo."
+  return "Type in a real words, you bozo."
 end
