@@ -35,29 +35,27 @@ class Anagramer
       puts "This is NOT an anagram!"
       return "This is NOT an anagram!"
     end
-    vowels = ["a", "e", "i", "o", "u"]
     if input2.downcase.chars.sort == input1.downcase.chars.sort
       puts "This is an ANAGRAM!"
       return "This is an ANAGRAM!"
     end
-
+    input1_array = input1.downcase.chars.sort
+    input2_array = input1.downcase.chars.sort
+    if input1_array.all? { |i| input2_array.include?(i)}
+      puts "These words have no matching letters and are considered to be ANTIGRAMS! The spiritual opposite of an anagram..."
+      return "These words have no matching letters and are considered to be ANTIGRAMS! The spiritual opposite of an anagram..."
+    end
   end
 end
 
 
 
 
+# tank = "tank".chars
+# kant = "kant".chars
+#
+# tank.all? { |i| kant.include?(i)}
 
 
-
-
-
-
-
-
-
-
-if "hhht".scan(/[aeiou]/) != []
-  puts "Type in a real words, you bozo."
-  return "Type in a real words, you bozo."
-end
+#
+# "tanks".downcase.chars.sort.all? { |i| "kant".downcase.chars.sort.include?(i)}

@@ -16,4 +16,8 @@ describe("Anagramer#check_if_anagram") do
     anagram1 = Anagramer.new()
     expect(anagram1.check_if_anagram("stressed","desserts")).to(eq("This is an ANAGRAM!"))
   end
+  it ("determines if two words are antigrams") do
+    anagram1 = Anagramer.new()
+    expect(anagram1.check_if_anagram("Tank","Quiz")).to(eq("These words have no matching letters and are considered to be ANTIGRAMS! The spiritual opposite of an anagram..."))
+  end
 end
