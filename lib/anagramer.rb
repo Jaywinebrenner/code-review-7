@@ -1,24 +1,3 @@
-#
-# class Anagramer
-#
-#   def initialize(input1, input2)
-#     @input1 = input1
-#     @input2 = input2
-#   end
-#
-#   def check_if_anagram
-#     if @input1.length != @input2.length
-#       puts "This is NOT an anagram"
-#     end
-#     array_input1 = @input1.downcase.chars.sort
-#     array_input2 = @input2.downcase.chars.sort
-#     if array_input1 == array_input2
-#       return
-#       puts "This is an ANAGRAM!"
-#   end
-# end
-#
-# end
 
 
 
@@ -26,12 +5,7 @@ class Anagramer
 
   def check_if_anagram (input1, input2)
 
-
-    if input1.scan(/[aeiou]/) == []
-      puts "Type in a real words, you bozo."
-      return "Type in a real words, you bozo."
-    end
-    if input1.length != input2.length
+  if input1.length != input2.length
       puts "This is NOT an anagram!"
       return "This is NOT an anagram!"
     end
@@ -49,13 +23,15 @@ class Anagramer
 end
 
 
+input1.each do
+      if string[counter]=="a" || string[counter]=="e" || string[counter]=="i" || string[counter]=="o" || string[counter]=="u"
+return "Type in a real words, you bozo."
+puts "Type in a real words, you bozo."
 
 
-# tank = "tank".chars
-# kant = "kant".chars
+# vowel_array1 = input1.scan(/[aeiou]/)
+# vowel_array2 = input2.scan(/[aeiou]/)
 #
-# tank.all? { |i| kant.include?(i)}
-
-
-#
-# "tanks".downcase.chars.sort.all? { |i| "kant".downcase.chars.sort.include?(i)}
+# if vowel_array1 || vowel_array2 == []
+#   puts "Type in a real words, you bozo."
+#   return "Type in a real words, you bozo."
