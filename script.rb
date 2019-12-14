@@ -1,6 +1,10 @@
 #!/usr/bin/env ruby
-# require ('rspec')
+require ('rspec')
 require ('./lib/anagramer')
+require ('ru_bee')
+
+
+
 
 resume = true
 while (resume)
@@ -19,3 +23,10 @@ while (resume)
     resume = false
   end
 end
+
+
+# if "pig dog mapijf".correct? == true
+#   puts "its a word"
+# else
+#   puts "its not a word"
+# end
