@@ -8,9 +8,9 @@ while (resume)
   input1 = gets.chomp
   puts("Please put your second word here:")
   input2 = gets.chomp
-  dude1 = Dude.new(input1.to_i, input2.to_i)
+  anagramer1 = Anagramer.new(input1, input2)
 
-  puts(dude1.function_dude)
+  puts(anagramer1.check_if_anagram)
   puts("Would you like to do this again sometime? Y/N")
   doResume = gets.chomp
   if doResume == "Y" || doResume == "y"
