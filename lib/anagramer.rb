@@ -54,30 +54,43 @@ class Anagramer
     array2 = @input2.gsub(/\W/, ' ').delete(' ').downcase.chars.sort
     array1_vowel_scan  = @input1.gsub(/\W/, ' ').delete(' ').downcase.chars.sort
     array2_vowel_scan  = @input2.gsub(/\W/, ' ').delete(' ').downcase.chars.sort
-    if array1_vowel_scan.count {|c| c =~ /[aeiou]/i } == 0
-      return "Type in real words, you bozo."
-      puts "Type in real words, you bozo."
-    end
-
-    if array1.length != array2.length
-      puts "This is NOT an anagram or an antigram. The amount of letters don't match"
-      return "This is NOT an anagram or an antigram. The amount of letters don't match"
-    end
-
-    if array1 == array2
-      puts "This is an ANAGRAM!"
-      return "This is an ANAGRAM!"
-    end
-
-    if (array1 & array2).empty? == true
-      puts "This is an ANTIGRAM!"
-      return "This is an ANTIGRAM!"
-    end
 
     if (@input1 =~ / /) || (@input2 =~ / /) >= 1
-      puts "there is more than one inputted word"
-      return "there is more than one inputted word"
-    end
+      sentence1 = @input1.split(" ")
+      counter = 0
+      vowels = {'a' => /[a]/, 'e' => /[e]/, 'i' => /[i]/, 'o' => /[o]/, 'u' => /[u]/,}
+      sentence1.each do |letter|
+        vowels.each do |key, value|
+          if letter =~ value
+            counter +=1
+          end
+        end
+
+    #   puts "there is more than one inputted word"
+    #   return "there is more than one inputted word"
+    # end
+    #
+    # if array1_vowel_scan.count {|c| c =~ /[aeiou]/i } == 0
+    #   return "Type in real words, you bozo."
+    #   puts "Type in real words, you bozo."
+    # end
+    #
+    # if array1.length != array2.length
+    #   puts "This is NOT an anagram or an antigram. The amount of letters don't match"
+    #   return "This is NOT an anagram or an antigram. The amount of letters don't match"
+    # end
+    #
+    # if array1 == array2
+    #   puts "This is an ANAGRAM!"
+    #   return "This is an ANAGRAM!"
+    # end
+    #
+    # if (array1 & array2).empty? == true
+    #   puts "This is an ANTIGRAM!"
+    #   return "This is an ANTIGRAM!"
+    # end
+
+
   end
 end
 
@@ -85,11 +98,14 @@ end
 
 
 
-
-"hello man, what is up?".split(" ")
-
-
-
-if (@input1 =~ /\s/) || (@input1 =~ /\s/) == nil
-puts "true"
-end
+sentence1 = @input1.split(" ")
+counter = 0
+vowels = {'a' => /[a]/, 'e' => /[e]/, 'i' => /[i]/, 'o' => /[o]/, 'u' => /[u]/}
+"hello this is not a sentence".each do |letter|
+  vowels.each do |key, value|
+    if letter =~ value
+      counter +=1
+    end
+    2
+  end
+  puts counter
