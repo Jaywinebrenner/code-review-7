@@ -1,8 +1,5 @@
 
 
-
-
-
 class Anagramer
 
   def initialize(input1, input2)
@@ -15,24 +12,24 @@ class Anagramer
       puts "This is NOT an anagram!"
       return "This is NOT an anagram!"
     end
+
     if @input2.downcase.chars.sort == @input1.downcase.chars.sort
-      puts "This is an ANAGRAM!"
-      return "This is an ANAGRAM!"
+      puts "This is an ANAGRAM for a words!"
+      return "This is an ANAGRAM for a words!"
     end
 
-    sentence_array1 = @input1.gsub(/\W/, ' ').delete(' ').downcase.chars.sort
-    sentence_array2 = @input2.gsub(/\W/, ' ').delete(' ').downcase.chars.sort
-    if sentence_array1 == sentence_array2
-      puts "This is an ANAGRAM!"
-      return "This is an ANAGRAM!"
+    array1 = @input1.gsub(/\W/, ' ').delete(' ').downcase.chars.sort
+    array2 = @input2.gsub(/\W/, ' ').delete(' ').downcase.chars.sort
+    if array1 == array2
+      puts "This is an ANAGRAM for sentences!"
+      return "This is an ANAGRAM for sentences!"
     end
 
-    input1_array = @input1.downcase.chars.sort
-    input2_array = @input2.downcase.chars.sort
-    if input1_array & input2_array == 0
+    if (array1 & array2).empty? == true
       puts "This is an ANTIGRAM!"
       return "This is an ANTIGRAM!"
     end
+
 
     # sentence_array1 = @input1.downcase.chars.sort
     # sentence_array2 = @input1.downcase.chars.sort
@@ -43,12 +40,7 @@ class Anagramer
 
   end
 end
-# ("Dormitory!", "Dirty room??")
-  # x = "There$ a t%n of Sh!t here@"
-  # x.gsub(/\W/, ' ').delete(' ')
-  # s = "I have white space".delete(' ')
 
-  #
   #
   # def vowel_checker()
   #   if @input1.scan(/[aeoui]/).count == 0
