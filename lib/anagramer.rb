@@ -22,14 +22,10 @@ class Anagramer
     end
 
       if array1 == array2
-      puts "This is an ANAGRAM for a words!"
-      return "This is an ANAGRAM for a words!"
+      puts "This is an ANAGRAM!"
+      return "This is an ANAGRAM!"
     end
 
-    if array1 == array2
-      puts "This is an ANAGRAM for sentences!"
-      return "This is an ANAGRAM for sentences!"
-    end
     if (array1 & array2).empty? == true
       puts "This is an ANTIGRAM!"
       return "This is an ANTIGRAM!"

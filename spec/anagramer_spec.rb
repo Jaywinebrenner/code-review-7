@@ -14,11 +14,11 @@ describe("Anagramer#check_if_anagram") do
   end
   it ("determines if two words are anagrams.") do
     anagram1 = Anagramer.new("rat","art")
-    expect(anagram1.check_if_anagram()).to(eq("This is an ANAGRAM for a words!"))
+    expect(anagram1.check_if_anagram()).to(eq("This is an ANAGRAM!"))
   end
   it ("determines if multiple worded 2 sentence inputs are anagrams") do
     anagram1 = Anagramer.new("Dormitory!", "Dirty room??")
-    expect(anagram1.check_if_anagram()).to(eq("This is an ANAGRAM for sentences!"))
+    expect(anagram1.check_if_anagram()).to(eq("This is an ANAGRAM!"))
   end
   it ("determines if two words are antigrams") do
     anagram1 = Anagramer.new("Tank","Quiz")
