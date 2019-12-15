@@ -65,6 +65,10 @@ class Anagramer
             counter +=1
           end
         end
+      end
+      puts counter
+
+
 
     #   puts "there is more than one inputted word"
     #   return "there is more than one inputted word"
@@ -93,19 +97,4 @@ class Anagramer
 
   end
 end
-
-
-
-
-
-sentence1 = @input1.split(" ")
-counter = 0
-vowels = {'a' => /[a]/, 'e' => /[e]/, 'i' => /[i]/, 'o' => /[o]/, 'u' => /[u]/}
-"hello this is not a sentence".each do |letter|
-  vowels.each do |key, value|
-    if letter =~ value
-      counter +=1
-    end
-    2
-  end
-  puts counter
+end
